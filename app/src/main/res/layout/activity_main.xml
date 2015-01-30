@@ -32,4 +32,16 @@
         android:layout_alignLeft="@+id/button"
         android:layout_alignStart="@+id/button" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actividad Implicita"
+        android:id="@+id/btImplicita"
+        android:layout_marginTop="72dp"
+        android:layout_below="@+id/btConResultado"
+        android:layout_alignRight="@+id/btConResultado"
+        android:layout_alignEnd="@+id/btConResultado"
+        android:layout_alignLeft="@+id/btConResultado"
+        android:layout_alignStart="@+id/btConResultado" />
+
 </RelativeLayout>

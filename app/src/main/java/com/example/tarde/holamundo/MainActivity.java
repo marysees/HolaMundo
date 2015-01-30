@@ -20,17 +20,18 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       //creamos y nos devuelve el objeto generico relacionado con el id que se indica
-        View boton= findViewById(R.id.button);
-       // boton.setOnClickListener(new SaludoOnClickListener());
+        //creamos y nos devuelve el objeto generico relacionado con el id que se indica
+        View boton = findViewById(R.id.button);
+        // boton.setOnClickListener(new SaludoOnClickListener());
 
-        boton.setOnClickListener(new View.OnClickListener(){
+
+        boton.setOnClickListener(new View.OnClickListener() {
 
             @Override
-             public void onClick(View v) {
+            public void onClick(View v) {
                 //indicamos que quiero que haga el evento
                 //
-               Intent intent= new Intent(MainActivity.this, SecondaryActivity.class);
+                Intent intent = new Intent(MainActivity.this, SecondaryActivity.class);
 
                 Intent dato = intent.putExtra("dato", "Mi nombre es Mary");
 
@@ -40,29 +41,41 @@ public class MainActivity extends ActionBarActivity {
                 //si queremos que la asctividad secundaria envie iinformacion a la actividad principal usamos
                 //starActivityForResult
 
-         }
+            }
         });
 
 
-        View botonConResultado= findViewById(R.id.btConResultado);
+        View botonConResultado = findViewById(R.id.btConResultado);
         // boton.setOnClickListener(new SaludoOnClickListener());
 
-        botonConResultado.setOnClickListener(new View.OnClickListener(){
+        botonConResultado.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 //indicamos que quiero que haga el evento
                 //
-                Intent intent= new Intent(MainActivity.this, ConResultadoActivity.class);
+                Intent intent = new Intent(MainActivity.this, ConResultadoActivity.class);
 
-               //si queremos que la asctividad secundaria envie iinformacion a la actividad principal usamos
+                //si queremos que la asctividad secundaria envie iinformacion a la actividad principal usamos
                 startActivityForResult(intent, REQUEST_CODE_CON_RESULTADO);
 
             }
         });
 
+        View botonImplicita = findViewById(R.id.btImplicita);
+
+        botonImplicita.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                //indicamos que quiero que haga el evento
+                Intent intent = new Intent("com.example.tarde.holamundo.IMPLICITA");
+
+                //abrimos la nueva ventana
+                startActivity(intent);
+            }
 
 
+        });
     }
 
 
@@ -82,8 +95,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
-
-    @Override
+@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
