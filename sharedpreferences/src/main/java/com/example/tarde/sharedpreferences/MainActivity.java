@@ -23,8 +23,16 @@ public class MainActivity extends ActionBarActivity {
 
                 @Override
                 public void onClick(View v) {
-                    Intent intent=new Intent(MainActivity.this, PreferencesActivity.class);
-                    startActivity(intent);
+
+
+                        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                    //para que lea una lista de preferencias
+                    String mensaje=preferences.getString(getResources().getString(R.string.key_nombre),"");
+//nos muestra la lista de preferencias anterior
+    Toast.makeText(MainActivity.this,mensaje,Toast.LENGTH_LONG).show();
+
+
+                    //startActivity(intent);
 
                 }
             });
@@ -66,6 +74,8 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent=new Intent(MainActivity.this, PreferencesActivity.class);
+
             return true;
         }
 

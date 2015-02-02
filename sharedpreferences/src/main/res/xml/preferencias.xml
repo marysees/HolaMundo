@@ -5,12 +5,15 @@
         android:summary="Esta propiedad  permite definir el nombre"
        android:title="Nombre"
         />
-    <ListPreference android:key="colores"
+    <ListPreference android:key="@string/key_colores"
         android:dialogTitle="Escriba su color favorito"
         android:summary="Esta propiedad  permite definir su color favorito"
         android:title="Color favorito"
-        android:entries="@array/pref_example_list_titles"
-        android:entryValues="@array/pref_example_list_values"
+        android:entries="@array/entriesColores"
+        android:entryValues="@array/entriesValuesColoresRGB"
         />
+
+
+
 
 </PreferenceScreen>

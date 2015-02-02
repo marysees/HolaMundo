@@ -6,5 +6,20 @@
     <string name="action_settings">Settings</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_preferences">PreferencesActivity</string>
+    <string name="key_colores">colores</string>
+    <string name="key_nombre">nombre</string>
+
+    <string-array name="entriesColores">
+        <item>rojo</item>
+        <item>verde</item>
+        <item>azul</item>
+    </string-array>
+    <string-array name="entriesValuesColoresRGB">
+        <item>F00</item>
+        <item>0F0</item>
+        <item>00F</item>
+    </string-array>
+
+
 
 </resources>
