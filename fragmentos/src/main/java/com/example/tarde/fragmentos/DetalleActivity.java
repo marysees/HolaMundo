@@ -20,8 +20,13 @@ public class DetalleActivity extends ActionBarActivity {
         CorreoElectronico item = (CorreoElectronico) getIntent().getSerializableExtra(KEY_CORREO_ITEM);
 
         DetalleFragment dtfrag= (DetalleFragment) getFragmentManager().findFragmentById(R.id.fragmentoListado);
+
         dtfrag.actualizarDetalle(item);
 
     }
+
+
+
+
 
 }

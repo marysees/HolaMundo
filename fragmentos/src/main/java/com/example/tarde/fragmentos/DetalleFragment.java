@@ -27,11 +27,6 @@ public class DetalleFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-
-      remitente=(EditText) getActivity().findViewById(R.id.etRemitente);
-        asunto=(EditText) getActivity().findViewById(R.id.etAsunto);
-        contenido=(EditText) getActivity().findViewById(R.id.etContenido);
-
         View guardar=getActivity().findViewById(R.id.btGuardar);
         View cancelar=getActivity().findViewById(R.id.btCancelar);
 
@@ -40,7 +35,7 @@ public class DetalleFragment extends Fragment {
             public void onClick (View v){
 
             }
-                                   });
+          });
 
      cancelar.setOnClickListener(new View.OnClickListener() {
          public void onClick (View v){
@@ -49,6 +44,11 @@ public class DetalleFragment extends Fragment {
      });
     }
     public void actualizarDetalle(CorreoElectronico item) {
+
+        remitente=(EditText) getActivity().findViewById(R.id.etRemitente);
+        asunto=(EditText) getActivity().findViewById(R.id.etAsunto);
+        contenido=(EditText) getActivity().findViewById(R.id.etContenido);
+
         remitente.setText(item.getRemitente());
         asunto.setText(item.getAsunto());
         contenido.setText(item.getContenido());
