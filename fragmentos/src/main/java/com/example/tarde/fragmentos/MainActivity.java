@@ -30,9 +30,16 @@ public class MainActivity extends ActionBarActivity {
        fragmentoDetalle= (DetalleFragment) fragmentManager.findFragmentById(R.id.fragmentoDetalle);
 
 
+
+
+    }
+
+        //Definimos el registro del listener en el onResume para evitar un null point que se produce
+        // cuando se registra en el oncreate ya que todavia no existe el attributo de clase listado
+    @Override
+    protected void onResume() {
         //Definir el listener para el onclick sobre la lista
         fragmentoListado.setOnItemClickListener((AdapterView.OnItemClickListener) this);
-
     }
 
     //El adapter view nos proporciona el listView
